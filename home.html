@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churn Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        h1 {
+            text-align: center;
+        }
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Churn Prediction</h1>
+    <form method="POST">
+        <label for="query1">SeniorCitizen (0 or 1):</label>
+        <input type="text" name="query1" id="query1" required><br>
+
+        <label for="query2">MonthlyCharges:</label>
+        <input type="text" name="query2" id="query2" required><br>
+
+        <label for="query3">TotalCharges:</label>
+        <input type="text" name="query3" id="query3" required><br>
+
+        <label for="query4">Gender (Male or Female):</label>
+        <input type="text" name="query4" id="query4" required><br>
+
+        <label for="query5">Partner (Yes or No):</label>
+        <input type="text" name="query5" id="query5" required><br>
+
+        <label for="query6">Dependents (Yes or No):</label>
+        <input type="text" name="query6" id="query6" required><br>
+
+        <label for="query7">PhoneService (Yes or No):</label>
+        <input type="text" name="query7" id="query7" required><br>
+
+        <label for="query8">MultipleLines (Yes, No, or No phone service):</label>
+        <input type="text" name="query8" id="query8" required><br>
+
+        <label for="query9">InternetService (DSL, Fiber optic, or No):</label>
+        <input type="text" name="query9" id="query9" required><br>
+
+        <label for="query10">OnlineSecurity (Yes, No, or No internet service):</label>
+        <input type="text" name="query10" id="query10" required><br>
+
+        <label for="query11">OnlineBackup (Yes, No, or No internet service):</label>
+        <input type="text" name="query11" id="query11" required><br>
+
+        <label for="query12">DeviceProtection (Yes, No, or No internet service):</label>
+        <input type="text" name="query12" id="query12" required><br>
+
+        <label for="query13">TechSupport (Yes, No, or No internet service):</label>
+        <input type="text" name="query13" id="query13" required><br>
+
+        <label for="query14">StreamingTV (Yes, No, or No internet service):</label>
+        <input type="text" name="query14" id="query14" required><br>
+
+        <label for="query15">StreamingMovies (Yes, No, or No internet service):</label>
+        <input type="text" name="query15" id="query15" required><br>
+
+        <label for="query16">Contract (Month-to-month, One year, Two year):</label>
+        <input type="text" name="query16" id="query16" required><br>
+
+        <label for="query17">PaperlessBilling (Yes or No):</label>
+        <input type="text" name="query17" id="query17" required><br>
+
+        <label for="query18">PaymentMethod (Electronic check, Mailed check, Bank transfer, Credit card):</label>
+        <input type="text" name="query18" id="query18" required><br>
+
+        <label for="query19">Tenure (in months):</label>
+        <input type="text" name="query19" id="query19" required><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <div id="output">
+        <p>{{ output1 }}</p>
+        <p>{{ output2 }}</p>
+    </div>
+</body>
+</html>
